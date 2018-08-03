@@ -8,11 +8,16 @@ abstract class BaseCtrl{
 
     abstract model: any;
 
-    getAll = (req: Request, res: Response) => {
+    getAll = async (req: Request, res: Response)  => {
+
+        // const result = await model.find();
+        // res.json(result);
+
         res.status(200).send({
             message: 'Hello World'
         });
     }
+
 
 
     getById = (req: Request, res: Response) => {
