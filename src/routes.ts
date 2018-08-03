@@ -3,6 +3,6 @@ import express from "express";
 
 export class Routes {
     public routes(app: express.Application): void {
-        app.get('/', registerCtrl.test);
+        app.get('/', registerCtrl.getAll);
     }
 }

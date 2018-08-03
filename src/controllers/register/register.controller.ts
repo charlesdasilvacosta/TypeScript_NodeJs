@@ -1,19 +1,15 @@
-import {Router, Request, Response, NextFunction} from 'express';
 
-class Register {
+import BaseCtrl from "../base";
+
+class Register extends BaseCtrl{
+
+    model: any;
 
     constructor() {
-        this.register = this.register.bind(this);
+        super();
+        //this.model = your model
     }
 
-    register(req: Request, res: Response, next: NextFunction) {
-    }
-
-    test(req: Request, res: Response) {
-        res.status(200).send({
-            message: 'Hello World'
-        });
-    }
 }
 
 export default new Register();
